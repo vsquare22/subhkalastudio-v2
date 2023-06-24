@@ -1,0 +1,105 @@
+:root{
+
+    --color-primary:#FF0800;
+    --color-primary-light:#B30000;
+    --color-primary-light-2:#FF5500;
+
+
+    --color-text-light-2:#3C3332;
+}
+
+// Responsive Breakpoints
+$breakpoint-desktop-1:106.25em; // 1700
+$breakpoint-desktop:93.75em; //1500
+$breakpoint-lgst:56.25em; //900;
+$breakpoint-lg: 50em;  // 800px
+$breakpoint-md: 46.875em; // 750px
+$breakpoint-md-1: 41.875em; // 650px
+$breakpoint-md-2: 37.5em; // 600px
+$breakpoint-sm-1: 34.375em; // 550px
+$breakpoint-sm-2: 31.875em; // 550px
+
+@keyframes moveRight {
+    0%{
+        transform:translateX(-2rem);
+    }
+
+    50%{
+        transform:translateX(1rem)
+    }
+    100%{
+        opacity:1;
+        transform:trnaslateX(0rem);
+    }
+}
+@keyframes moveLeft {
+    0%{
+        transform:translateX(3rem);
+    }
+
+    50%{
+        transform:translateX(-2rem)
+    }
+    100%{
+        opacity:1;
+        transform:trnaslateX(0rem);
+    }
+}
+
+*,
+*::after,
+*::before{
+
+    box-sizing: inherit;
+    padding:0;
+    margin:0;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+
+
+    
+    @media only screen and (min-width:$breakpoint-desktop) {
+        font-size: 75%;
+    }
+    @media only screen and (min-width:$breakpoint-desktop-1) {
+        font-size: 87.5%;
+    }
+
+    @media only screen and (max-width:$breakpoint-lg) {
+        font-size: 56.25%;
+    }
+    @media only screen and (max-width:$breakpoint-md-2) {
+        font-size: 50%;
+    }
+}
+
+body{
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-weight: 500;
+    min-height: 100vh;
+    color:var(--color-text-light-2);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.6rem;
+
+}
+
+::selection{
+    background:#FF0800;
+    color:#fff;
+    
+}
+
+::-webkit-scrollbar{
+
+    width:8px;
+    background:rgba(#fff,0.25);
+}
+
+::-webkit-scrollbar-thumb{
+    background:#FF0800;
+    border-radius: 2px;
+}

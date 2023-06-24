@@ -1,0 +1,89 @@
+
+.project{
+
+    display: flex;
+    flex-direction: column;
+    gap:6rem;
+    background:#f9f9f9;
+    @media only screen and (max-width:$breakpoint-sm-1) {
+        margin-top: 9rem;
+    }
+    &__heading{
+        text-align: center;
+        color:#fff;
+        background:linear-gradient(to right ,#ff0800,#ff5500);
+        padding:1.5rem;
+
+    }
+
+    &__content{
+        display: flex;
+        color:#000;
+        font-size: 1.6rem;
+        gap: 3rem;
+        width:90vw;
+        font-weight: 500;
+        background:#fff;
+        padding:3rem;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: justify;
+        @media only screen and (max-width:$breakpoint-md){
+            flex-direction: column;
+            box-shadow: 0 1.5rem 2rem rgba(#000,0.15);
+        
+        }
+        @media only screen and (max-width:$breakpoint-sm-1){
+            flex-direction: column;
+
+        
+        }
+        &:nth-child(odd){
+            flex-direction: row-reverse;
+        @media only screen and (max-width:$breakpoint-md){
+            flex-direction: column;
+        
+        }
+        }
+        &:last-child{
+            margin-bottom: 6rem;
+        }
+
+    }
+
+    &__img{
+        width:60rem;
+        filter:contrast(100%);
+        
+
+        @media only screen and (max-width:$breakpoint-md){
+            width:90%;
+
+        
+        }
+        @media only screen and (max-width:$breakpoint-sm-1){
+            width:90%;
+
+        
+        }
+
+    }
+
+    &__desc{
+        border-right:3rem solid #ff0800;
+        border-left: 3rem solid #ff0800;
+        padding:3rem;
+
+
+        @media only screen and (max-width:$breakpoint-lgst){
+            border:none;
+            padding:2rem;
+
+        }
+        @media only screen and (max-width:$breakpoint-md){
+            border:none;
+        
+        }
+    }
+}

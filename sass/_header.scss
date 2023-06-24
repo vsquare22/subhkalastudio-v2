@@ -1,0 +1,183 @@
+.header{
+
+    display:flex;
+    justify-content: space-between;
+    padding:1rem 4rem 0 0 ;
+    align-items: center;
+    position:relative;
+    overflow: hidden;
+    max-width: 100vw;
+    background:#fff;
+    @media  only screen and (max-width:$breakpoint-sm-1) {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:35;
+    }
+
+    &__logo{
+
+        width:18rem;
+        margin-top:-1rem;
+        height:9.5rem;
+
+        &-img{
+            width:100%;
+        }
+        
+    }
+    &__icon{
+        fill:var(--color-primary);
+        width:100%;
+        height: 100%;        
+    }
+
+    &__nav{
+
+        display: flex;
+        list-style: none;
+        gap:1rem;
+        animation: moveLeft .5s  ease-in forwards;
+        @media only screen and (max-width:$breakpoint-sm-1) {
+            flex-direction: column;
+            justify-content: start;
+            position:fixed;
+            width:100%;
+            top:0;
+            left:0;
+            text-align: center;
+            transform:translateX(100%);
+            opacity:0;
+            background:rgba(#000,0.85);
+            backdrop-filter: blur(3px);
+            transition:all .3s;
+            padding:10rem;
+            z-index:2000;
+            height:100vh;
+            
+        }
+
+        &.active{
+            transform:translateX(0);
+            opacity:1;
+        }
+
+    }
+    &__item{
+
+        &:visited,
+        &:link{
+        text-transform: capitalize;
+        padding:1.8rem 3rem;
+        font-size: 1.8rem;
+        text-decoration: none;
+        color:#373737;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+        transition:all .3s;
+        @media only screen and (max-width:$breakpoint-sm-1) {
+            width:100%;
+            color:#fff;
+            
+        }
+
+        }
+ 
+        &:hover,
+        &:active{
+            box-shadow: 0 1rem 1.5rem rgba(#000,0.20);
+            transform:translateY(-4px);
+            color:var(--color-primary);
+        }
+
+        &::after{
+            position:absolute;
+            content:'';
+            width:100%;
+            height:2px;
+            background:var(--color-primary);
+            bottom:0;
+            left:0;
+            transform:scaleX(0);
+            transition: all .3s;
+
+        }
+
+        &:hover::after{
+            transform:scaleX(1)
+        }
+    }
+
+    &__item.active::after{
+        transform:scaleX(1);
+    }
+
+    &__toggle{
+
+        &-btn{
+            cursor:pointer;
+            width:5rem;
+            height:5rem;
+            display:none;
+            margin-right: -2rem;
+            
+            
+        @media only screen and (max-width:$breakpoint-sm-1) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index:10000;
+            margin-top: -1.5rem;;
+            
+        }
+    }
+        &-btn:hover &-bar::before{
+            transform:translateY(-1rem);
+        }
+        &-btn:hover &-bar::after{
+            transform:translateY(1rem);
+        }
+
+        &-btn.active &-bar::before{
+            transform:translateY(0rem) rotate(135deg);
+        }
+        &-btn.active &-bar::after{
+            transform:translateY(0rem) rotate(-135deg);
+        }
+        &-btn.active &-bar{
+            background-color: transparent;
+        }
+
+        &-bar{
+
+            width:3.5rem;
+            height: 2px;
+            background:var(--color-primary);
+            border-radius: 8px;
+            position: relative;
+
+            &::after,
+            &::before{
+                content:'';
+                width:3.5rem;
+                height:2px;
+                border-radius: 8px;
+                background-color:var(--color-primary);
+                left:0;
+                transition:all .3s;
+                position:absolute;
+            }
+
+            &::after{
+                transform:translateY(.8rem);
+            }
+            &::before{
+                transform:translateY(-.8rem);
+            }
+
+        }
+    }
+}
+

@@ -1,0 +1,48 @@
+.h-4{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: "Montserrat" ;
+
+}
+.h-1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: 1;
+    font-family: "Montserrat" ;
+
+   @media only screen and (min-width:$breakpoint-desktop) {
+        text-align: center;
+    }
+    @media only screen and (max-width:$breakpoint-md){
+        text-align: center;
+    }
+
+}
+
+.p{
+    font-size: 1.6rem;
+    color:#898989;
+    font-weight: 500;
+    text-align: center;
+}
+
+.mb-sm{
+    margin-bottom: 1.5rem;
+}
+.mb-md{
+    margin-bottom: 2rem;
+       @media only screen and (min-width:$breakpoint-desktop) {
+        margin-bottom: 4rem;
+    }
+
+}
+.mb-lg{
+    margin-bottom: 4.5rem;
+    @media only screen and (max-width:$breakpoint-md){
+        margin-bottom: 3rem;
+    }
+}
+
