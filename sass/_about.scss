@@ -50,8 +50,8 @@
 
             font-size: 1.6rem;
             padding: 3rem;
-            border-right:3rem solid #ff0800;
-            border-left: 3rem solid #ff0800;
+            border-right:3rem solid $color-primary;
+            border-left: 3rem solid $color-primary;
         @media only screen and (max-width:$breakpoint-md){
             border-width: 2rem;
     }

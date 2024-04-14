@@ -1,6 +1,6 @@
 .footer{
 
-    background:linear-gradient(to right bottom , #ff0800,#ff5500);
+    background:linear-gradient(to right bottom , $color-primary,$color-primary-light);
     padding: 6rem 8rem;
     display: flex;
     color:#fff;

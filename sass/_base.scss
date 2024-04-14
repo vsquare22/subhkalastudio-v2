@@ -1,12 +1,14 @@
 :root{
 
-    --color-primary:#FF0800;
+    --color-primary:#5EB8FC;
     --color-primary-light:#B30000;
     --color-primary-light-2:#FF5500;
-
-
     --color-text-light-2:#3C3332;
 }
+
+$color-primary : #5EB8FC;
+$color-primary-light : #09ecd9;
+$color-primary-light-2 : #5efcba;
 
 // Responsive Breakpoints
 $breakpoint-desktop-1:106.25em; // 1700
@@ -88,7 +90,7 @@ body{
 }
 
 ::selection{
-    background:#FF0800;
+    background:$color-primary;
     color:#fff;
     
 }
@@ -100,6 +102,6 @@ body{
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#FF0800;
+    background:$color-primary;
     border-radius: 2px;
 }

@@ -91,7 +91,7 @@
 
         &--next:hover,
         &--prev:hover{
-            fill:#ff0800;
+            fill:$color-primary;
 
         }
     }
@@ -114,31 +114,31 @@
 
 
         .slide-1{
-            background:url(../img/carousel-img-1.png);
+            background:url(../img/carousel-1.jpg);
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
         }
         .slide-2{
-            background:url(../img/carousel-img-2.png);
+            background:url(../img/carousel-2.jpg);
                         background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
         }
         .slide-3{
-            background:url(../img/carousel-img-3.png);
+            background:url(../img/carousel-3.jpg);
                         background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
         }
         .slide-4{
-            background:url(../img/carousel-img-4.png);
+            background:url(../img/carousel-4.jpg);
                         background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
         }
         .slide-5{
-            background:url(../img/carousel-img-5.png);
+            background:url(../img/carousel-5.jpg);
                         background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -183,7 +183,7 @@
             }
         }
         .dots.active{
-            background:#ff0800;
+            background:$color-primary;
         }
     }
 }

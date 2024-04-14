@@ -11,7 +11,7 @@
     &__heading{
         text-align: center;
         color:#fff;
-        background:linear-gradient(to right ,#ff0800,#ff5500);
+        background:linear-gradient(to right ,$color-primary,$color-primary-light);
         padding:1.5rem;
 
     }
@@ -65,8 +65,8 @@
     }
 
     &__desc{
-        border-right:3rem solid #ff0800;
-        border-left: 3rem solid #ff0800;
+        border-right:3rem solid $color-primary;
+        border-left: 3rem solid $color-primary;
         padding:3rem;
 
 
